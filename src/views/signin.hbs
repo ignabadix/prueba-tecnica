@@ -1,0 +1,26 @@
+<div class="card text-center">
+  <div class="card-header">
+    Log in please
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Enter your RUT and password to log in.</h5>
+    <br>
+    <form action="/signin" method="POST">
+      <div class="container">
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">RUT:</span>
+          <input type="text" name="rut" class="form-control" placeholder="complete RUT with dash and identifier number">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">PASSWORD:</span>
+          <input type="password" name="password" class="form-control" placeholder="Enter your password">
+        </div>
+        <br>
+        <button class="btn btn-success btn-block">
+          Log in       
+        </button>
+      </div> 
+    </form>  
+  </div>
+</div>

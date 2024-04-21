@@ -1,0 +1,52 @@
+<div class="card text-center">
+  <div class="card-header">
+    Please register
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Enter the requested data.</h5>
+    <br>
+    <form action="/signup" method="POST">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="input-group input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">NAME</span>
+                        <input type="text" class="form-control" name="name" value="{{name}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">LAST NAME</span>
+                        <input type="text" class="form-control" name="lastname" value="{{lastname}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">RUT</span>
+                        <input type="text" class="form-control" name="rut" value="{{rut}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">EMAIL</span>
+                        <input type="text" class="form-control" name="email" value="{{email}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
+            </div>
+                
+            <div class="input-group input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">PASSWORD</span>
+                <input type="password" class="form-control" name="password" value="{{password}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>  
+        </div>
+            <button class="btn btn-success btn-block">
+                Register a new user       
+            </button>
+    </form>
+    
+    
+  </div>
+
+</div>

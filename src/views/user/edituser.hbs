@@ -1,0 +1,46 @@
+<div class="col-md-4 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1>Edit User</h1>
+        </div>
+    </div>
+    <div class="card-body">
+        <form action="/user/edituser/{{editheuser._id}}?_method=PUT" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="name" value="{{editheuser.name}}">
+            </div>
+            <div class="form-group">
+                <input type="text" name="lastname" class="form-control" placeholder="lastname" value="{{editheuser.lastname}}">
+            </div>
+
+            <!-- scope-->
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Scope</label>
+                <select class="form-select" style="width: 75%;" name="scope">
+                    <option value="admin" {{#if (eq editheuser.scope "admin")}}selected{{/if}}>ADMIN</option>
+                    <option value="user" {{#if (eq editheuser.scope "user")}}selected{{/if}}>BASIC USER</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" name="rut" class="form-control" value="{{editheuser.rut}}" placeholder="rut">
+            </div>
+            <div class="form-group">
+                <input type="text" name="email" class="form-control" value="{{editheuser.email}}" placeholder="email">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="password" value="{{editheuser.password}}">
+            </div>   
+            <div class="form-group">
+                <button class="btn btn-success btn-block" type="submit">
+                    Update User
+                </button>                
+            </div>   
+        </form>
+    </div>
+</div>
+
+
+
+
+

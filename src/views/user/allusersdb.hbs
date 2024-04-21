@@ -1,0 +1,39 @@
+<h1 class="text-center">User List</h1>
+<ul class="list-group list-group-flush">
+  {{#each allusers}}
+    <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-1"><strong>Name</strong></div>
+          <div class="col-md-1"><strong>Lastname</strong></div>
+          <div class="col-md-1"><strong>Scope</strong></div>
+          <div class="col-md-1"><strong>Rut</strong></div>
+          <div class="col-md-3"><strong>Email</strong></div>
+          <div class="col-md-2"><strong>Password</strong></div>
+        </div>
+      <div class="row">
+        <div class="col-md-1">{{#if this.name}}{{this.name}}{{else}}Name not available{{/if}}</div>
+        <div class="col-md-1">{{#if this.lastname}}{{this.lastname}}{{else}}Lastname not available{{/if}}</div>
+        <div class="col-md-1">{{#if this.scope}}{{this.scope}}{{else}}Scope not available{{/if}}</div>
+        <div class="col-md-1">{{#if this.rut}}{{this.rut}}{{else}}Rut not available{{/if}}</div>
+        <div class="col-md-3">{{#if this.email}}{{this.email}}{{else}}Email not available{{/if}}</div>
+        <div class="col-md-2">{{#if this.password}}{{this.password}}{{else}}password not available{{/if}}</div>
+        <div class="col-md-1"><a href="/user/edituser/{{_id}}" class="btn btn-info">Edit</a></div>
+        <div class="col-md-1">
+          <form action="/user/delete/{{_id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-warning" type="submit">
+              Delete
+            </button>
+          </form>
+        </div>
+        <div class="col-md-1"><a href="/user/navigationuser" class="btn btn-secondary">Back</a></div>
+        <!-- Otros campos aquí -->
+      </div>
+    </li>
+  {{/each}}  
+</ul>
+
+
+
+
+
